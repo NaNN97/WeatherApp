@@ -26,5 +26,30 @@ body {
   font-weight: 300;
   font-style: normal;
   font-variation-settings: "slnt" 0;
+  display: flex;
 }
 
+main {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: gray;
+  width: 600px;
+}
+
+/* Classes */
+.searchBox-section {
+  margin-top: 32px;
+}
+
+.searchBox {
+  border-radius: 30px;
+  border-style: none;
+  padding: 16px 16px 16px 16px;
+}
+
+.current-location {
+
+}
