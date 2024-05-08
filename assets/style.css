@@ -26,7 +26,6 @@ body {
   font-weight: 300;
   font-style: normal;
   font-variation-settings: "slnt" 0;
-  display: flex;
 }
 
 main {
@@ -51,5 +50,24 @@ main {
 }
 
 .current-location {
+  width: 100%;
+  margin-top: 32px;
+  border: solid 1px black;
+}
 
+.hourly-forecast {
+  width: 100%;
+  margin-top: 32px;
+  border: solid 1px black;
+}
+
+.ten-day-forecast {
+  width: 100%;
+  margin-top: 32px;
+  border: solid 1px black;
+}
+
+.ten-day-forecast-item {
+  display: flex;
+  flex-direction: row;
 }
