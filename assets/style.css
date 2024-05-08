@@ -4,7 +4,8 @@
 /* Variable CSS */
 
 :root {
-
+  --background-main-color: #1e1f24;
+  --background-section-color: #2e2e37;
 }
 
 /* Base */
@@ -26,6 +27,8 @@ body {
   font-weight: 300;
   font-style: normal;
   font-variation-settings: "slnt" 0;
+  color: white;
+  background-color: var(--background-main-color);
 }
 
 main {
@@ -36,6 +39,12 @@ main {
   flex-direction: column;
   background-color: gray;
   width: 600px;
+}
+
+/* Shared Classes */
+
+.section {
+  background-color: var(--background-section-color);
 }
 
 /* Classes */
