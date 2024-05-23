@@ -147,9 +147,10 @@ input:checked + .slider:before {
 .profile {
   display: flex;
   align-items: center;
+  gap: 16px;
 }
 
-.profile-user {
+.profile div{
 
 }
 
@@ -189,20 +190,64 @@ input:checked + .slider:before {
 
 .current-location {
   width: 100%;
-  margin-top: 32px;
-  
+  margin-top: 32px;  
+}
+
+.current-location-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current-location-weather {
+
+}
+
+.current-location-weather img{
+  width: 100px;
+}
+
+.current-location-city {
+
+}
+
+.current-location-temp {
+
 }
 
 .hourly-forecast {
   width: 100%;
   margin-top: 32px;
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.hourly-forecast:hover {
+  box-shadow: inset 10px 0px 10px 0px var(--background-main-color);
+}
+
+.hourly-forecast-item {
+  padding: 24px;
+  background-color: var(--button-main-color);
+  color: #1e1f24;
+  text-align: center;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.map {
+  width: 100%;
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .ten-day-forecast {
   width: 100%;
   margin-top: 32px;
-  
 }
 
 .ten-day-forecast-item {

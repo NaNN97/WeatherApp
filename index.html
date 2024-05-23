@@ -4,6 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/style.css">
+  <!-- icons -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Temperature'],
+          ['United Kingdom', 14],
+        ]);
+
+        var options = {
+          region: 'GB',
+          datalessRegionColor: '#1e1f24', 
+          colorAxis: {colors: ['#c8e6e8']},
+          defaultColor: '#c8e6e8',
+          backgroundColor: '#2e2e37',
+          backgroundColor: {
+            fill: '#2e2e37',
+            stroke: '#c8e6e8',
+          },
+
+
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
   <title>WeatherApp</title>
 </head>
 <body>
@@ -28,21 +65,75 @@
 
   <main>
     <div class="current-location section">
-      <p>Now in</p>
-      <p>New York</p>
-      <p>11<span>°</span></p>
-      <p>Cloudy</p>
-      <p>Feels like 11<span>°</span></p>
-      <p>Cloudy with Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="current-location-item">
+        <div class="current-location-weather">
+          <img src="/assets/img/sunny-cloud.png" alt="sunny-cloud">
+        </div>
+
+        <div class="current-location-city">
+          <h3>Now in</h3>
+          <h1>New York</h1>
+          <p>Sunny Cloudy</p>
+          <p>USA</p>
+        </div>
+
+
+        <div class="current-location-temp">
+          <h3>Temperature</h3>
+          <h1>14<span>°</span></h1>
+          <p>Feels like</p>
+          <p>11<span>°</span></p>
+        </div>
+
+        <div class="current-location-humidity">
+          <h3>Humidity</h3>
+          <h1>90<span>%</span></h1>
+          <p>amount of water vapor</p>
+          <p>in the air</p>
+        </div>
+      </div>
+
+      <div class="hourly-forecast">
+        <div class="hourly-forecast-item">
+          <p>10am</p>
+          <h1><i class="uil uil-cloud"></i></h1>
+          <p>11<span>°</span></p>
+        </div>
+
+        <div class="hourly-forecast-item">
+          <p>10am</p>
+          <h1><i class="uil uil-cloud"></i></h1>
+          <p>11<span>°</span></p>
+        </div>
+
+        <div class="hourly-forecast-item">
+          <p>10am</p>
+          <h1><i class="uil uil-cloud"></i></h1>
+          <p>11<span>°</span></p>
+        </div>
+
+        <div class="hourly-forecast-item">
+          <p>10am</p>
+          <h1><i class="uil uil-cloud"></i></h1>
+          <p>11<span>°</span></p>
+        </div>
+
+        <div class="hourly-forecast-item">
+          <p>10am</p>
+          <h1><i class="uil uil-cloud"></i></h1>
+          <p>11<span>°</span></p>
+        </div>
+
+        <div class="hourly-forecast-item">
+          <p>10am</p>
+          <h1><i class="uil uil-cloud"></i></h1>
+          <p>11<span>°</span></p>
+        </div>
+      </div>
     </div>
 
-    <div class="hourly-forecast section">
-      <p class="text-heading-section">Hourly forecast</p>
-      <div class="hourly-forecast-item">
-        <p>11<span>°</span></p>
-        <p>🌦</p>
-        <p>Now</p>
-      </div>
+    <div class="map section">
+      <div id="regions_div" style="height: 250px; width: 500px"></div>
     </div>
 
     <div class="ten-day-forecast section">
